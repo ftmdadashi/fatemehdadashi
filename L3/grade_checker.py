@@ -1,5 +1,6 @@
 """
 
+
 q3.4. nomreye daneshjo ro begri eye adadi beyne 0 ta 20
 
 ag 18 - 20 --> A
@@ -15,19 +16,31 @@ ag 18 - 20 --> A
 
 grade = float(input("please enter your grade between (0-20) :"))
 
-if (grade >= 18) and (grade <= 20) :
+if grade > 20 :
+    print('not acceptable grade, grade can be less than 20 ')
+
+elif grade>=18 :
+    #inja yani na balaye 20 hast va balaye 18 hast
+    #yani hamoon beyne 20 ta 18
     print("Your grade is A")
     
-if  (grade >= 16) and (grade < 18) :
+elif grade>=16 :
+    #inja na balaye 20 hast , na balaye 18 . pas yani zire 18 hast
+    #va shart mige bayad balaye 16 bashe
+    #yani beyne 18 ta 16
     print("Your grade is B")
     
-if  (grade >= 14) and (grade < 16):
+elif grade>=14 :
+    #hamchnin inja yani beyne 14 ta 16 
     print("Your grade is C")
     
-if  (grade >= 10) and (grade < 14) :
+elif grade>=10 :
     print("Your grade is D")
     
-if  (grade < 10) :
+else:
+    #inja else yani , hichkodom az shart haye bala nist
+    #yani na balaye 20 , na baal 18 , 16 , 14, 10 
+    #pas yani vaghty ke zire 10 hast in hamon else hast
     print("FAILL")
     
     
@@ -68,16 +81,6 @@ Your grade is B
     
   
 """
-
-
-
-
-
-
-
-
-
-
 
 
 
