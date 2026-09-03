@@ -30,9 +30,8 @@ print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 
         
 while passed_dic :
-    for scores in passed_dic.values():
-        max_score = scores
-        break
+    
+    max_score = list(passed_dic.values())[0]
     
     
     for scores in passed_dic.values():
