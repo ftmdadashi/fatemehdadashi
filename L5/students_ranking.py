@@ -23,7 +23,7 @@ for name,num in zip(students,scores) :
         print(name,"with score",num,"is passed.")
         passed_dic[name] = num
         
-        
+    
 
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
 print("<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<")
