@@ -57,19 +57,12 @@ print(show_balance(balance))
 balance = apply_fee(balance, 50)
 print(show_balance(balance))
 
-#ba run kardan dar spyder : ImportError: attempted relative import with no known parent package
-#banabar in dar powershell file ra be soorate yek moudle az parent(bank_package)
+#dar powershell file ra be soorate yek moudle az parent(bank_package)
 #run mikonim.
 #PS F:\python\7_class\L7> python -m bank_project.app.main
 #100000
 #150000
 #145000
-
-
-
-
-
-
 
 
 
