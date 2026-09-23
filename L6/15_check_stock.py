@@ -67,3 +67,42 @@ print(check)
 """
 True
 """
+
+
+
+#--------------------------------------------------------------------------------------
+
+
+def check_stock(products,product):
+    if products[product]==0:
+        return False
+    else:
+        return True
+    
+    
+    
+    
+    
+
+#production
+products = {
+    "iphone": 5,
+    "macbook": 2,
+    "airpods": 0
+}  
+
+products['iphone']
+
+#motmaen nistik oon key vojod dre
+
+products.get('iphone') #Out[71]: 5
+
+zarf = products.get('glass')
+print(zarf) #None
+
+#error nmide
+
+
+zarf = products.get('glass',0)
+print(zarf)
+

@@ -29,7 +29,7 @@ def calculate_grade(number:float) -> str :
     """
     
     if number > 100 or number < 0 :
-        return None
+        raise ValueError ('nemishavad balaye 100 ya zire sefr bshad')
     
     elif number >= 90 :
         return "A"

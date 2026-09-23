@@ -95,7 +95,29 @@ your char repeats : 3
 """
 
 
+    
+#jomle , kalame
+sentence='i love python and i love deep learning'
+#(sentence,love)
 
+sentence.count('love') #Out[53]: 2
+
+
+def count_word(sentence,word):
+    count = sentence.count(word)
+    return count 
+
+#ba for
+
+def count_word(sentence,myword):
+    count = 0 
+    senetnce_list = sentence.split()
+    for word in senetnce_list:
+        if word == myword:
+            count = count + 1  
+    return count 
+
+    
 
 
 

@@ -158,3 +158,33 @@ print(check)
 """
 ('z1', 'zara cloth 121', 30)
 """
+
+
+
+def find_tuple_by_code(products,code):
+    for product in products:
+        if product['code']==code:
+            product_tuple = (product['code'],product['name'],product['price'])
+            return product_tuple
+
+
+find_tuple_by_code(products,'z3') #Out[81]: ('z3', 'zara cloth 451', 35)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

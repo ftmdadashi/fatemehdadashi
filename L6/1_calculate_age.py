@@ -43,7 +43,27 @@ def birth(year:int)->int :
     age = 1405 - year
     return age
     
+help(birth)
 
+"""
+Help on function birth in module __main__:
+
+birth(year: int) -> int
+    SUMMARY : tabee baraye mohasebe sen barasase sale tavalod.
+
+    Parameters
+    ----------
+    year : int
+        DESCRIPTION : sale tavalod be onvane vorodi.
+
+    Returns
+    -------
+    int
+        DESCRIPTION : sen be onvane khoroji mibashad.
+
+
+
+"""
 your_age = birth(1370)
 print("your age is :",your_age)
 

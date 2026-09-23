@@ -56,3 +56,48 @@ countdown(12)
 0
 
 """
+
+
+
+
+
+
+def countdown(number):
+    for i in range(0,number):
+        print(10-i)
+
+
+countdown(10)
+'''
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+'''
+
+def countdown(number):
+    for i in range(0,number+1):
+        print(10-i)
+
+
+
+countdown(10)
+'''
+10
+9
+8
+7
+6
+5
+4
+3
+2
+1
+0
+'''

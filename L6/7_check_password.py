@@ -67,6 +67,25 @@ password kamel nist.
 
 """
 
+#--------------------
+
+def check_password(password):
+    
+    if len(password)<8:
+        return False
+    elif password.isdigit():
+        return False
+    elif password.isalpha():
+        return False
+    #islower()
+    else:
+        return True
+    
+    
+
+print('------Login form---------')
+username = input('user name:')
+password = input('password:')
 
 
 
@@ -149,3 +168,29 @@ print("your password star is :",check)
 your password star is : 2
 
 """
+
+
+
+
+#------------
+def check_password_strength(password):
+    #strength 
+    #shart -> True doros bode
+    shart1 = len(password)>=8
+    shart2 = not password.isdigit()
+    shart3 = not password.isalpha()
+    shart4 = not password.islower()
+    shart5 = not password.isupper()
+    
+    if all([shart1,shart2,shart3,shart4,shart5]):
+        strengt=4
+        
+    elif all([shart1,shart2,shart3]):
+        strength = 3 
+    elif shart1:
+        strength =2 
+    else:
+        strength=1
+        
+    return strength
+        

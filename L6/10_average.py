@@ -30,7 +30,7 @@ def average(numbers_list : list ) -> float :
         summ += numbers
         
     average_numbers = summ / len(numbers_list)
-    return average_numbers
+    return round(average_numbers, 2)
 
 
 
@@ -39,6 +39,6 @@ print("your average is :", check_average)
 
 
 """
-your average is : 16.833333333333332
+your average is : 16.83
 
 """
