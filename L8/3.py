@@ -12,7 +12,7 @@ def create_profile(name : str ,age : int , **kwargs) :
 
 
 check = create_profile("fatemeh", 35, city = "tehran", email = "f.dadashi")
-print("your compelete data are :",check)
+print("your complete data are :",check)
 
 
 """
