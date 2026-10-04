@@ -22,24 +22,3 @@ def make_payment() :
 #----------------------------------------------------------------------------------------
 
 
-from .fee import calculate_fee
-from ..accounts.authentication import login
-
-
-
-
-def make_payment() :
-    pass
-
-
-
-
-#PS F:\python\8_class\L8> python -m project3.payments.payment
-
-# dar in ghesmat chon az .. estefade shode banabar in dar project3 hastim,
-# pas dar parent aan yani L8 az tarighe powershell vared mishavim
-# va az anja file ra run mikonim.
-
-
-
-
