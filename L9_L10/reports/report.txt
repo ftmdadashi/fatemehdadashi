@@ -1,0 +1,16 @@
+the name of files :['data.csv', 'image.jpg', 'main.py', 'report.pdf', 'users.txt']
+the name of files :5
+data.csv size is :4.096
+image.jpg size is :4.096
+main.py size is :4.096
+report.pdf size is :4.096
+users.txt size is :4.096
+sum of the sizes is :20.48 and average is : 4.096
+maximum size is :4.096 and minimum is :4.096
+data.csv size is :5
+image.jpg size is :5
+main.py size is :5
+report.pdf size is :5
+users.txt size is :5
+['.csv', '.jpg', '.py', '.pdf', '.txt']
+{'.csv': 1, '.jpg': 1, '.py': 1, '.pdf': 1, '.txt': 1}
