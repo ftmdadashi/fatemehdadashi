@@ -51,7 +51,14 @@ ra faraham konad.
 """
 
 class BankAccount :
+    
+     account_list = []
      def __init__(self,owner,account_number,balance) :
+         
+         if account_number in BankAccount.account_list :
+             raise ValueError("account number is available.")
+             
+         BankAccount.account_list.append(account_number)
          self.owner = owner
          self.account_number = account_number
          self.balance = balance
@@ -78,7 +85,7 @@ class BankAccount :
          if amount > self.balance :
              raise ValueError("amount can't be more than balance")
              
-         elif amount < 0 :
+         elif amount <= 0 :
              raise ValueError("amount can't be negative.")
              
          else :
@@ -144,8 +151,7 @@ ali.transaction_history()
 +2000000 recieve from account Ali
 """
      
-             
-             
+                         
              
              
              
