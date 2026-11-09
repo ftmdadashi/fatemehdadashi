@@ -117,11 +117,13 @@ class FileManager:
         except FileNotFoundError:
             print("file does not exist.")
 
+
+
     def find_user(self, username):
         for user in self.users:
             if user.username == username:
                 return user
-        return None
+        return False
     
     
 
@@ -164,13 +166,13 @@ class FileManager:
     def update_status(self, username, status):
         if status not in ["active", "blocked"]:
             return False
-
-        user = self.find_user(username)
-
-        if not user:
+        
+        if self.find_user(username):
             return False
-
-        user.status = status
+       
+        for user in self.users:
+            if user.username == username:
+                user.status = status
 
         with open(self.file_name, "w") as file:
             for user in self.users:
@@ -178,6 +180,10 @@ class FileManager:
                 file.write(formatted_text)
 
         return True
+    
+    
+    
+    
 
     def login(self, username, password):
         user = self.find_user(username)
@@ -192,6 +198,9 @@ class FileManager:
             return True
 
         return False
+    
+    
+    
 
     def generate_roport(self):
         self.numbers_of_users = 0
@@ -213,7 +222,7 @@ class FileManager:
         )
 
 
-manager = FileManager("users.txt")
+check = FileManager("users.txt")
 
 
 print("===============USER MANAGEMENT==================")
@@ -239,7 +248,7 @@ while massage != "7":
 
         status = input("Enter status: ")
 
-        result = manager.add_user(username, password, email, status)
+        result = check.add_user(username, password, email, status)
 
         print(result)
 
@@ -247,15 +256,16 @@ while massage != "7":
 
         username = input("Enter username: ")
 
-        result = manager.find_user(username)
+        result = check.find_user(username)
 
         print(result)
+        
 
     elif massage == "3":
 
         username = input("Enter username: ")
 
-        result = manager.delete_user(username)
+        result = check.delete_user(username)
 
         print(result)
 
@@ -265,7 +275,7 @@ while massage != "7":
 
         status = input("Enter new status: ")
 
-        result = manager.update_status(username, status)
+        result = check.update_status(username, status)
 
         print(result)
 
@@ -275,13 +285,13 @@ while massage != "7":
 
         password = input("Enter password: ")
 
-        result = manager.login(username, password)
+        result = check.login(username, password)
 
         print(result)
 
     elif massage == "6":
 
-        result = manager.generate_roport()
+        result = check.generate_roport()
 
         print(result)
 
