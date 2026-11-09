@@ -17,7 +17,7 @@ cursor = connection.cursor()
 
 cursor.execute('''CREATE TABLE IF NOT EXISTS user_information(
                 id INT AUTO_INCREMENT PRIMARY KEY,
-                username VARCHAR(50) NOT NULL,
+                username VARCHAR(50) UNIQUE NOT NULL,
                 password VARCHAR(50) NOT NULL,
                 status VARCHAR(20) DEFAULT 'active')''')
 
@@ -37,4 +37,19 @@ result = cursor.fetchall()
 
 #------------------------------------------------------------------------
 
-print(result)      #[(1, 'ftm70', '001fa', 'active')]
+print(result)
+cursor.close()
+
+
+"""
+
+enter your password: strongpassword
+[(1, 'ftm70', '001fa', 'active')
+ 
+"""
+
+
+
+
+
+
