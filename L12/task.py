@@ -1,10 +1,44 @@
+"""
+ kar ba paygahe dade MySQL dar python
+ 
+dar in tamrin bayad yek paygahe dade dar MySQL ijad karde , sepas az tarighe python
+
+ba aan ertebat bargharar konid. sepas  be paygahe dadeh users ba estefade az karbare 
+
+user_manager motasel shavid. jadvali be name user_information ijad konid, yek record
+
+jadid dar aan besazid, record sabt shodeh ra ba estefade az python az database 
+
+daryaft konid , etelaate recorde daryaft shode ra dar khoroji namaysh dahid.
+
+
+
+1. ijade karbare jadid:
+    
+   CREATE USER 'user_manager'@'localhost' IDENTIFIED BY 'strongpassword';
+
+    
+2. ijade paygahe dadeh be name : users :
+    
+    CREATE DATABASE IF NOT EXISTS users;
+
+
+3. etaye dastresi kamel be karbar baraye paygahe dadeh ijad shode:
+    
+    GRANT ALL PRIVILEGES ON users.* TO 'user_manager'@'localhost';
+
+"""
+    
+    
+
 import mysql.connector
-import getpass
+from dotenv import load_dotenv 
+import os
 
 
 
-
-user_password = getpass.getpass("enter your password: ")
+load_dotenv()
+user_password = os.getenv("user_password")
 connection = mysql.connector.connect(
     host='localhost',
     port=3306,
@@ -43,7 +77,7 @@ cursor.close()
 
 """
 
-enter your password: strongpassword
+
 [(1, 'ftm70', '001fa', 'active')
  
 """
